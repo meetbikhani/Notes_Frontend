@@ -58,8 +58,7 @@ const Notes = () => {
     } catch (err) {
       if (err.response?.status === 401) {
         navigate("/login");
-      }
-      else console.error("Error creating note:", err);
+      } else console.error("Error creating note:", err);
     }
   };
 
@@ -74,8 +73,7 @@ const Notes = () => {
     } catch (err) {
       if (err.response?.status === 401) {
         navigate("/login");
-      }
-      else console.error("Error editing note:", err);
+      } else console.error("Error editing note:", err);
     }
   };
 
@@ -86,8 +84,7 @@ const Notes = () => {
     } catch (err) {
       if (err.response?.status === 401) {
         navigate("/login");
-      }
-      else console.error("Error deleting note:", err);
+      } else console.error("Error deleting note:", err);
     }
   };
 
@@ -98,8 +95,7 @@ const Notes = () => {
     } catch (err) {
       if (err.response?.status === 401) {
         navigate("/login");
-      }
-      else console.error("Error logging out:", err);
+      } else console.error("Error logging out:", err);
     }
   };
 
@@ -196,6 +192,7 @@ const Notes = () => {
                         size="small"
                         color="primary"
                         onClick={() => {
+                          console.log("Editing note:", note);
                           setEditingNote(note);
                           setTitle(note.title);
                           setContent(note.content);
